@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "2780709b-2ba6-458c-926b-3a265b6b2151",
+		"name": "DummyJSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25150239"
+	},
+	"item": [
+		{
+			"name": "Get list of products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body({\r",
+							"    \"id\": 1,\r",
+							"    \"title\": \"iPhone 9\",\r",
+							"    \"description\": \"An apple mobile which is nothing like apple\",\r",
+							"    \"price\": 549,\r",
+							"    \"discountPercentage\": 12.96,\r",
+							"    \"rating\": 4.69,\r",
+							"    \"stock\": 94,\r",
+							"    \"brand\": \"Apple\",\r",
+							"    \"category\": \"smartphones\",\r",
+							"    \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\",\r",
+							"    \"images\": [\r",
+							"        \"https://i.dummyjson.com/data/products/1/1.jpg\",\r",
+							"        \"https://i.dummyjson.com/data/products/1/2.jpg\",\r",
+							"        \"https://i.dummyjson.com/data/products/1/3.jpg\",\r",
+							"        \"https://i.dummyjson.com/data/products/1/4.jpg\",\r",
+							"        \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r",
+							"    ]\r",
+							"    });\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.stock).to.eql(94);\r",
+							"});\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products/1",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get laptop",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"laptop\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products/search?q=Laptop",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Laptop"
+						},
+						{
+							"key": "\"title\"",
+							"value": "\"iPhone X\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get iPhone X",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"iPhone X\");\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products/search?q=iPhone X",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "iPhone X"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products/categories",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get categories/smartphones",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products/category/smartphones",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"category",
+						"smartphones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"title\": \"LG 8989623262389\",\r\n    \"description\": \"SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...\",\r\n    \"price\": 1899,\r\n    \"discountPercentage\": 100,\r\n    \"rating\": 51,\r\n    \"stock\": 34,\r\n    \"brand\": \"Apple\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.{{{{dummy}}}}json.com/data/products/2/thumbnail.jpg\",\r\n    \"images\": [\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/2/1.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/2/2.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/2/3.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/2/thumbnail.jpg\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dummy}}/products/add",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update new product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"iPhone 99\",\r\n    \"description\": \"An apple mobile which is nothing like apple\",\r\n    \"price\": 549,\r\n    \"discountPercentage\": 12.96,\r\n    \"rating\": 4.69,\r\n    \"stock\": 94,\r\n    \"brand\": \"Apple\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.{{{{dummy}}}}json.com/data/products/1/thumbnail.jpg\",\r\n    \"images\": [\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/1.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/2.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/3.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/4.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/thumbnail.jpg\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dummy}}/products/1",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update new product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"iPhone 99\",\r\n    \"description\": \"An apple mobile which is nothing like apple\",\r\n    \"price\": 549,\r\n    \"discountPercentage\": 12.96,\r\n    \"rating\": 4.69,\r\n    \"stock\": 94,\r\n    \"brand\": \"Apple\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.{{{{dummy}}}}json.com/data/products/1/thumbnail.jpg\",\r\n    \"images\": [\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/1.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/2.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/3.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/4.jpg\",\r\n        \"https://i.{{{{dummy}}}}json.com/data/products/1/thumbnail.jpg\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dummy}}/products/2",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"deletedOn\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{dummy}}/products/2",
+					"host": [
+						"{{dummy}}"
+					],
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Response time is less than 800ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(800);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dummy",
+			"value": "https://dummyjson.com",
+			"type": "string"
+		}
+	]
+}
