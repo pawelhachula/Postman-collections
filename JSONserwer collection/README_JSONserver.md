@@ -12,6 +12,6 @@ Sources:
 This collection was created during the REST API and Postman course. Includes basic requests, global variables, dynamic variables, pre-request scripts. 
 
 ## How to use my collection
-1. Get my collection from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserwer.postman_collection.json)
-2. Get collection environment from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserwerEnvironment_Dev.postman_environment.json)
+1. Get my collection from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserver.postman_collection.json)
+2. Get collection environment from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserverEnvironment_Dev.postman_environment.json), [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserverEnvironment_Test.postman_environment.json) and [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserverWorkspace.postman_globals.json)
 3. Run in Postman
