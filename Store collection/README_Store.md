@@ -15,6 +15,6 @@ The API is available [HERE](https://simple-books-api.glitch.me)
 This collection was created during the REST API and Postman course. Includes basic requests and simple tests. 
 
 ## How to use my collection
-1. Get my collection from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserwer.postman_collection.json)
-2. Get collection environment from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserwerEnvironment_Dev.postman_environment.json)
+1. Get my collection from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/Store%20collection/Store.postman_collection.json)
+2. Get collection environment from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/Store%20collection/StoreWorkspace.postman_globals.json) and [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/Store%20collection/Store_Dev.postman_environment.json)
 3. Run in Postman
