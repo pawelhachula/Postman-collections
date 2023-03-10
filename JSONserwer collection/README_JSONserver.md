@@ -9,7 +9,7 @@ Sources:
 
 
 ## My collection description
-This collection was created during the REST API and Postman course. Includes basic requests, global variables, dynamic variables, pre-request scripts. 
+This collection was created during the REST API and Postman course. Includes basic requests, dynamic variables, pre-request scripts. 
 
 ## How to use my collection
 1. Get my collection from [HERE](https://github.com/pawelhachula/Postman-collections/blob/main/JSONserwer%20collection/JSONserver.postman_collection.json)
