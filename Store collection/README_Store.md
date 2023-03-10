@@ -1,4 +1,4 @@
-# JSONserver collection
+# Store collection
 
 ## About Simple Books API
 Simple Books is a free API perfect for anyone who wants to practice with API testing. This API allows you to reserve a book.
